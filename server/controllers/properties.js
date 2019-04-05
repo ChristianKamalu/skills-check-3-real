@@ -1,4 +1,4 @@
-module.exports = {
+module.exports = { 
     get: async (req, res) => {
         const db = req.app.get('db');
         let listings = await db.getListings()

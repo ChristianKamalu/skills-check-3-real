@@ -11,7 +11,7 @@ class Wizard extends Component{
             state:null,
             zip:null
         }
-    }
+    } 
 
     handleChange = (e) => {
         const {name, value} = e.target

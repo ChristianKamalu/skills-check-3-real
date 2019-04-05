@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, {Component} from 'react'; 
 import House from '../House/House';
 import axios from 'axios'
 
