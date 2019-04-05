@@ -1,4 +1,5 @@
-import {createStore} from 'redux'; 
+import {createStore} from 'redux';  
+import Axios from 'axios';
 
 const initialState = {
     name: '',

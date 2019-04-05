@@ -1,6 +1,7 @@
-import React, {Component} from 'react'; 
+import React, {Component} from 'react';  
 import House from '../House/House';
 import axios from 'axios'
+import {Link} from 'react-router-dom'
 
 class Dashboard extends Component{
     constructor(props) {
@@ -18,6 +19,7 @@ class Dashboard extends Component{
                     properties: res.data
                 })
             })
+            .catch(err => console.log(err))
     }
     
     render() {
@@ -28,7 +30,7 @@ class Dashboard extends Component{
                 <div className='dashboard'>
                     <div className='dashboard-header-container'>
                         <h1>Dashboard</h1>
-                        <button className='add-property-button' onClick={this.props.create}>Add New Property</button>
+                        <Link className='add-property-button' to='/addProperty'>Add New Property</Link>
                     </div>
                     <hr/>
                     <h3>Home Listings</h3>

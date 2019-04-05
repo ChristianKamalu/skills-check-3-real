@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import Axios from 'axios';
+import {Link} from 'react-router-dom'
 
 class Wizard extends Component{
     constructor() {
@@ -11,7 +12,7 @@ class Wizard extends Component{
             state:null,
             zip:null
         }
-    } 
+    }  
 
     handleChange = (e) => {
         const {name, value} = e.target
@@ -37,7 +38,7 @@ class Wizard extends Component{
             <div className='wizard'>
                 <div className='wizard-header-container'>
                     <h1>Add New Listing</h1>
-                    <button className='cancel-button' onClick={this.props.create}>Cancel</button>
+                    <Link className='cancel-button' to='/'>Cancel</Link>
                 </div>
                 <div className='input-containers'>
                     <div><h4>Property Name</h4><input name='name' onChange={e => this.handleChange(e)}/></div>

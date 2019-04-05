@@ -5,7 +5,7 @@ const session = require('express-session');
 
 const properties = require('./controllers/properties');
 
-const app = express(); 
+const app = express();  
 
 const {SERVER_PORT, CONNECTION_STRING, SESSION_SECRET} = process.env;
 
