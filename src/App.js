@@ -1,26 +1,28 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Header from './components/Header/Header';
+import Dashboard from './components/Dashboard/Dashboard';
+import Wizard from './components/Wizard/Wizard';
+import {HashRouter, Link} from 'react-router-dom';
 
 class App extends Component {
+  constructor() {
+    super()
+    this.state = {
+      create: false
+    }
+  }
+
+  handleCreate = () => this.state.create ? this.setState({create: false}) : this.setState({create: true})
+
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+      <HashRouter>
+        {/* <div className="body"> */}
+        <div>
+          
+        </div>
+      </HashRouter>
     );
   }
 }
