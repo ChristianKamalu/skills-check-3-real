@@ -26,5 +26,6 @@ app.use(session({
 
 app.get('/dashboard', properties.get)
 app.post('/addProperty', properties.post)
+app.delete('/deleteListing/:id', properties.delete)
 
 app.listen(SERVER_PORT, () => console.log('listening on', SERVER_PORT))

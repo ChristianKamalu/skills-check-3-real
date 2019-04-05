@@ -30,7 +30,7 @@ class Dashboard extends Component{
                 <div className='dashboard'>
                     <div className='dashboard-header-container'>
                         <h1>Dashboard</h1>
-                        <Link className='add-property-button' to='/addProperty'>Add New Property</Link>
+                        <Link className='add-property-button' to='/addProperty/step1'>Add New Property</Link>
                     </div>
                     <hr/>
                     <h3>Home Listings</h3>
