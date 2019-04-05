@@ -14,6 +14,7 @@ const initialState = {
 }
 
 export const INFO = "INFO";
+export const IMAGE = "IMAGE";
 
 function reducer (state = initialState, action) {
     const { type, payload } = action;

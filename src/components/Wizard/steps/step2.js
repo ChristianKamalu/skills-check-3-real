@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import store from '../../../store';
+import store, {IMAGE} from '../../../store';
 import {Link} from 'react-router-dom'
 
 class Step2 extends Component{
@@ -7,11 +7,7 @@ class Step2 extends Component{
         const reduxState = store.getState()
         super()
         this.state = {
-            name:null,
-            address:null,
-            city:null,
-            state:null,
-            zip:null
+            image: reduxState.image
         }
     }
 
@@ -19,6 +15,13 @@ class Step2 extends Component{
         const {name, value} = e.target
         this.setState({
             [name]: value
+        })
+    }
+
+    handleClick = () => {
+        store.dispatch({
+            type: IMAGE,
+            payload: this.state
         })
     }
 
